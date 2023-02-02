@@ -6,10 +6,10 @@
 <li> Install Docker and start the service.<br>
 https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/49bac70807a33f2e0f3c2628be2c512d1e1959dc/Dockerfile#L9-L10</li>
 <li> Create a new User for Docker and add it to dockergroup.<br>
-https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L12-L14</li>
+https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/5f743de7b8e3e0143d46f4cae64c4f99971d1b67/codes.txt#L4-L6</li>
 <li> Create a directory /opt/docker and change owner as dockeradmin.<br>
-https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L15-L17</li>
-<li> Write a Dockerfile in /opt/docker.<br>
+https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/5f743de7b8e3e0143d46f4cae64c4f99971d1b67/codes.txt#L7-L9</li>
+<li> Write a Dockerfile in /opt/docker <br>
 https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L1-L6</li>
 <li> Login to Jenkins console and add Docker Server SSH Server.<br>
 Manage Jenkins --> Configure System --> Publish over SSH --> add Docker server and Credentials.</li> 
@@ -18,25 +18,22 @@ Manage Jenkins --> Configure System --> Publish over SSH --> add Docker server a
 <li> Source Code Management<br> Repository :https://github.com/bfsabah/Jenkins-Maven-Docker-Project.git <br> Branches to Build: */main </li>
 <li> Build Root POM: pom.xml <br> Goals and Options: clean install package </li>
 <li> Send Files or Execute Commands over SSH <br>
-![image](https://user-images.githubusercontent.com/113843658/216295099-e330a171-dee2-443d-a9fa-da5262c26038.png)<br>
     Name: docker_host<br>
     Source files: webapp/target/*.war<br>
     Remove Prefix: webapp/target <br>
     Remote directory: //opt//docker<br>
     Exec command[s]:<br>
-    https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L19-L23
+   https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/5f743de7b8e3e0143d46f4cae64c4f99971d1b67/codes.txt#L11-L15
     </li>
 <li> Send files or execute commands over SSH (2nd job) <br>
-![image](https://user-images.githubusercontent.com/113843658/216295237-c2c0250e-3a3e-419d-ae6e-2b416ff5b4fd.png)
-    <br>
     Name: docker_host<br>
     Exec command: <br>
-    https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L25
+    https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/5f743de7b8e3e0143d46f4cae64c4f99971d1b67/codes.txt#L17
     </li>
 </ul>
 <li> Login to Docker host and check images and containers (delete if any existing images or containers) </li>
 <li> Build Jenkins Maven Job. </li>
 <li> Check images and containers again on Docker Host. There must be 2 images and a container. </li>
 <li> Access web application from browser which is running on container. <br>
-https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L27</li>
+https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/5f743de7b8e3e0143d46f4cae64c4f99971d1b67/codes.txt#L19</li>
 </ol>
