@@ -2,10 +2,14 @@
 ![jenkins-maven-docker (1)](https://user-images.githubusercontent.com/113843658/215920141-3f75f295-0405-46df-8278-3099d1353857.jpg)<br>
 <ol>
 <li> Launch an EC2 instance for Docker Host.</li>
-<li> Install Docker and start the service.</li>
-<li> Create a new User for Docker and add it to dockergroup.</li>
-<li> Create a directory /opt/docker and change owner as dockeradmin. </li>
-<li> Write a Dockerfile in /opt/docker.</li>
+<li> Install Docker and start the service.<br>
+https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/49bac70807a33f2e0f3c2628be2c512d1e1959dc/Dockerfile#L9-L10</li>
+<li> Create a new User for Docker and add it to dockergroup.<br>
+https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L12-L14</li>
+<li> Create a directory /opt/docker and change owner as dockeradmin.<br>
+https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L15-L17</li>
+<li> Write a Dockerfile in /opt/docker.<br>
+https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L1-L6</li>
 <li> Login to Jenkins console and add Docker Server SSH Server.<br>
 Manage Jenkins --> Configure System --> Publish over SSH --> add Docker server and Credentials.</li> 
 <li> Create a Jenkins Maven Project.</li>
@@ -18,14 +22,17 @@ Manage Jenkins --> Configure System --> Publish over SSH --> add Docker server a
     Remove Prefix: webapp/target <br>
     Remote directory: //opt//docker<br>
     Exec command[s]:<br>
+    https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L19-L23
     </li>
 <li> Send files or execute commands over SSH (2nd job) <br>
     Name: docker_host<br>
     Exec command: <br>
+    https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L25
     </li>
 </ul>
 <li> Login to Docker host and check images and containers (delete if any existing images or containers) </li>
 <li> Build Jenkins Maven Job. </li>
 <li> Check images and containers again on Docker Host. There must be 2 images and a container. </li>
-<li> Access web application from browser which is running on container. </li>
+<li> Access web application from browser which is running on container. <br>
+https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L27</li>
 </ol>
