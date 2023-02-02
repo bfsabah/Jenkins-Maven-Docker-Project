@@ -1,5 +1,6 @@
 # Jenkins-Maven-Docker-Project
-https://user-images.githubusercontent.com/113843658/215920141-3f75f295-0405-46df-8278-3099d1353857.jpg<br>
+![jenkins-maven-docker (1)](https://user-images.githubusercontent.com/113843658/216242295-1f0d3d4c-7d8b-410e-bfa4-ac68e7a99159.jpg)
+<br>
 <ol>
 <li> Launch an EC2 instance for Docker Host.</li>
 <li> Install Docker and start the service.<br>
