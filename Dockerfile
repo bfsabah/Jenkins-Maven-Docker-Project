@@ -12,6 +12,9 @@ service docker start
 useradd dockeradmin
 passwd dockeradmin
 usermod -aG docker dockeradmin
+mkdir -p /opt/docker
+cd /opt/docker
+chwown dockeradmin:dockeradmin /opt/docker
 
 docker stop dhemir_demo;
 docker rm -f dhemir_demo;
