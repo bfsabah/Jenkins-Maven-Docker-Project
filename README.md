@@ -18,6 +18,7 @@ Manage Jenkins --> Configure System --> Publish over SSH --> add Docker server a
 <li> Source Code Management<br> Repository :https://github.com/bfsabah/Jenkins-Maven-Docker-Project.git <br> Branches to Build: */main </li>
 <li> Build Root POM: pom.xml <br> Goals and Options: clean install package </li>
 <li> Send Files or Execute Commands over SSH <br>
+![image](https://user-images.githubusercontent.com/113843658/216295099-e330a171-dee2-443d-a9fa-da5262c26038.png)<br>
     Name: docker_host<br>
     Source files: webapp/target/*.war<br>
     Remove Prefix: webapp/target <br>
@@ -26,6 +27,7 @@ Manage Jenkins --> Configure System --> Publish over SSH --> add Docker server a
     https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L19-L23
     </li>
 <li> Send files or execute commands over SSH (2nd job) <br>
+![image](https://user-images.githubusercontent.com/113843658/216295237-c2c0250e-3a3e-419d-ae6e-2b416ff5b4fd.png)<br>
     Name: docker_host<br>
     Exec command: <br>
     https://github.com/bfsabah/Jenkins-Maven-Docker-Project/blob/995372b4d2461c64113cb04be48386474d004317/Dockerfile#L25
